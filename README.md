@@ -3,6 +3,7 @@
 ### A Cat Breed API
 
 #### _By_ Alesandria Wild, Casey Hill, Eva K., Jase Grable, Joshua Khan, Thomas Bakken, Bannakaffalatta
+
 <br>
 
 ##### ...._"The cat does not offer services. The cat offers itself."_ - William S. Burroughs
@@ -32,7 +33,7 @@ Cats.
 
 - Clone this repository to your local machine.
   ```bash
-  $ git clone https://github.com/_____
+  $ git clone https://github.com/ekmagiccat/CatBreedApi.Solution
   ```
 - Open VS Code (or your IDE of choice).
 - Open the top level directory you just cloned.
@@ -41,7 +42,7 @@ Cats.
 <details>
 <summary> Database Setup </summary>
 
-- Use a MySql RDBMS (like MySql Workbench) to import/upload the ______.sql file and create your database.
+- Use a MySql RDBMS (like MySql Workbench) to import/upload the **\_\_**.sql file and create your database.
 - In your CatBreed Directory, create a file with the name `appsettings.json` and copy and past the following code into this file:
 
   <pre><code>{
@@ -127,7 +128,7 @@ Cats.
     ```
     ```bash
     $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0
-     ```
+    ```
 
 - To overwrite a different version of .NET to .NET 6, Try creating a `global.json` file in the Factory dir that contains the following code to override the default version, if your version exceeds .NET 6.0:<br>
   <pre><code>{
@@ -162,4 +163,4 @@ with any the following:
 </details>
 <br><br><br>
 
-<img src="https://static.wikia.nocookie.net/moviemorgue/images/9/98/Banna.jpg/revision/latest?cb=20141024211535" alt="Bannakaffalatta" style="max-width: 100px;"><img src="https://static.wikia.nocookie.net/moviemorgue/images/9/98/Banna.jpg/revision/latest?cb=20141024211535" alt="Bannakaffalatta" style="max-width: 100px;"><img src="https://static.wikia.nocookie.net/moviemorgue/images/9/98/Banna.jpg/revision/latest?cb=20141024211535" alt="Bannakaffalatta" style="max-width: 100px;"><img src="https://static.wikia.nocookie.net/moviemorgue/images/9/98/Banna.jpg/revision/latest?cb=20141024211535" alt="Bannakaffalatta" style="max-width: 100px;"><img src="https://static.wikia.nocookie.net/moviemorgue/images/9/98/Banna.jpg/revision/latest?cb=20141024211535" alt="Bannakaffalatta" style="max-width: 100px;"><img src="https://static.wikia.nocookie.net/moviemorgue/images/9/98/Banna.jpg/revision/latest?cb=20141024211535" alt="Bannakaffalatta" style="max-width: 100px;">
+<img src="https://static.wikia.nocookie.net/moviemorgue/images/9/98/Banna.jpg/revision/latest?cb=20141024211535" alt="Bannakaffalatta" style="max-width: 100px;">

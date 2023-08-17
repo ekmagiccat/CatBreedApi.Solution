@@ -95,5 +95,19 @@ namespace CatBreed.Controller
         {
             return _db.Cats.Any(c => c.CatId == id);
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCat(int id)
+        {
+            Cat cat = await _db.Cats.FindAsync(id);
+            if (cat == null)
+            {
+                return NotFound();
+            }
+
+            _db.Cats.Remove(cat);
+            await _db.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }
