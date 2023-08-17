@@ -96,9 +96,9 @@ Cats.
 <details>
 <summary>Endpoints</summary>
 
-<span style="color: green; font-style: italic;">GET</span> /api/
+<span style="color: rgb(3, 132, 252); font-style: italic;">GET</span> /api/
 <br>
-<span style="color: purple; font-style: italic;">POST</span> /api/
+<span style="color: green; font-style: italic;">POST</span> /api/
 <br>
 <span style="color: orange; font-style: italic;">PUT</span> /api/
 <br>
