@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CatBreed.Models;
 using System.Linq;
+using System.Net;
 
 namespace CatBreed.Controller
 {
@@ -9,6 +10,7 @@ namespace CatBreed.Controller
     [ApiController]
     public class CatBreedController : ControllerBase
     {
+        private readonly string Api_Key = "arshbergarsh";
         private readonly CatBreedContext _db;
 
         public CatBreedController(CatBreedContext db)
@@ -17,10 +19,15 @@ namespace CatBreed.Controller
         }
 
         [HttpGet]
-        public async Task<List<Cat>> Get(string breedName, string fur, string temperament, int avgKittenPrice, int usPopularity)
+        public async Task<ActionResult<List<Cat>>> Get(string breedName, string fur, string temperament, int avgKittenPrice, int usPopularity, int offset, string api_key)
         {
+            int limit = 5;
             IQueryable<Cat> query = _db.Cats.AsQueryable();
 
+            if (api_key != Api_Key)
+            {
+                return NotFound();
+            }
             if (breedName != null)
             {
                 query = query.Where(entry => entry.BreedName == breedName);
@@ -42,7 +49,7 @@ namespace CatBreed.Controller
                 query = query.Where(entry => entry.UsPopularity == usPopularity);
             }
 
-            return await query.ToListAsync();
+            return await query.Skip(offset).Take(limit).ToListAsync();
         }
 
         [HttpGet("{id}")]
